@@ -1,3 +1,3 @@
 var now = moment();
-$(".container").textContent = now;
+$(".container").text(now);
 console.log(now);
