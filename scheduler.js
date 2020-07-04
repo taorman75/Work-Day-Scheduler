@@ -1,3 +1,3 @@
 var now = moment();
-$(".container").text(now);
+$("#currentDay").text(now);
 console.log(now);
