@@ -1,18 +1,46 @@
-var currDate = moment().format('dddd MMMM Do, YYYY');
+var currDate = moment().format("dddd MMMM Do, YYYY");
 $("#currentDay").text(currDate);
-console.log(currDate);
+// console.log(currDate);
 
 var now = moment();
-console.log(now);
+// console.log(now);
+var thisHour = moment().hour();
 
-var i = 20;
 
-if ((moment().hour(i)) < now) {
-    $(".form-control").addClass("past");
+function textBlockClass(hour){
+    // console.log(hour, " element hour");
+    // console.log(thisHour, "moment's hour");
+    
+  if (thisHour > hour) {
+    $("#" + hour).addClass("past");
     console.log("earlier");
-} else if ((moment().hour(i)) > now) {
-    $(".form-control").addClass("future");
-    console.log("later");  
-} else {
-    $(".form-control").addClass("present");
-}
+  } else if (thisHour < hour) {
+    $("#" + hour).addClass("future");
+    console.log("later");
+  } else if (thisHour = hour) {
+    $("#" + hour).addClass("present");
+  }
+} //end textBlockClass fct def
+
+function applyCurrentTime(){
+
+    //for each loop over each time Block Element
+    
+    $(".form-control").each(function() {
+        // console.log(this.id);
+        textBlockClass(this.id);
+    });
+
+}//end applyCurrentTime fct def
+
+applyCurrentTime();
+
+
+
+
+// subtractButton.addEventListener("click", function() {
+//     count--; // update variable
+//     counter.textContent = count; // update HTML
+
+//     localStorage.setItem("count", count); // update storage, remains until it is manually cleared
+//   });
