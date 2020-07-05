@@ -36,10 +36,15 @@ textarea{
   border-top: 1px solid white;;
 }
 
+
+
 .hour {
-  background-color: #ffffff;
+  background-color: white;
   color: #000000;
   border-top: 1px dashed #000000;
+  width: 75px;
+  text-align: right;
+  padding-top: 10px;
 }
 
 .past {
@@ -61,9 +66,11 @@ textarea{
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+  margin-bottom: 1px;
   background-color: #06AED5;
   color: white;
-  width: 50px;
+  width: 75px;
+  padding: 25px 30px;
 }
 
 .saveBtn i:hover {
@@ -71,3 +78,6 @@ textarea{
   transition: all .3s ease-in-out;
 }
 
+#lock {
+  text-align: center;
+}
