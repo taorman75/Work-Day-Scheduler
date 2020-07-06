@@ -34,17 +34,15 @@ function applyCurrentTime(){
 }//end applyCurrentTime fct def
 
 
-
-
-
 applyCurrentTime();
+
 // saveTimeblockEntry();
 
-
+// function saveTimeBlocks () {
 $(".saveBtn").click(function()
 {var toDo = $(".form-control").val();
 localStorage.setItem(".form-control", toDo);
 console.log("clicked");
 });
-
+// }
 
