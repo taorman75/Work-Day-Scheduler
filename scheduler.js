@@ -33,10 +33,19 @@ function applyCurrentTime(){
 
 }//end applyCurrentTime fct def
 
+
+
+
+
 applyCurrentTime();
+// saveTimeblockEntry();
 
 
-
+$("saveBtn").click(function()
+{var toDo = $(".form-control").value;
+localStorage.setItem(".form-control", toDo);
+console.log("clicked");
+});
 
 // subtractButton.addEventListener("click", function() {
 //     count--; // update variable
