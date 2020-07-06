@@ -8,7 +8,7 @@ As the day progresses, the time blocks reflect (by color) whether that time is i
 
 The application pulls information about the current time from moment.js.
 
-![scheduler screen shot](https://github.com/taorman75/Work-Day-Scheduler/blob/master/WorkDayScheduler.jpeg)
+![scheduler screen shot](https://github.com/taorman75/Work-Day-Scheduler/blob/master/WorkDayScheduler.jpg)
 
 
 *Author - Tana Orman (JavaScript)*
