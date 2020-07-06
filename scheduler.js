@@ -13,10 +13,10 @@ function textBlockClass(hour){
     
   if (thisHour > hour) {
     $("#" + hour).addClass("past");
-    console.log("earlier");
+    console.log(hour);
   } else if (thisHour < hour) {
     $("#" + hour).addClass("future");
-    console.log("later");
+    console.log(hour);
   } else if (thisHour = hour) {
     $("#" + hour).addClass("present");
   }
@@ -41,15 +41,10 @@ applyCurrentTime();
 // saveTimeblockEntry();
 
 
-$("saveBtn").click(function()
-{var toDo = $(".form-control").value;
+$(".saveBtn").click(function()
+{var toDo = $(".form-control").val();
 localStorage.setItem(".form-control", toDo);
 console.log("clicked");
 });
 
-// subtractButton.addEventListener("click", function() {
-//     count--; // update variable
-//     counter.textContent = count; // update HTML
 
-//     localStorage.setItem("count", count); // update storage, remains until it is manually cleared
-//   });
