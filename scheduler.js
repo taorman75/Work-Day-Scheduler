@@ -50,10 +50,10 @@ console.log("clicked");
 
 //write a for loop that goes through every hour of the day.
 //for each hour. look inlocaal storage for that hour and put the value into the todo for that hour.
-var hour = 8;
 
-$("#todo-" + hour).each(function(){
-  localStorage.getItem(id, toDo);
-  console.log(toDo);
-  hour++;
+
+$(".form-control").each(function(){
+  localStorage.getItem("todo-" + id).val();
+  console.log("todo-" + id);
+  
 })
