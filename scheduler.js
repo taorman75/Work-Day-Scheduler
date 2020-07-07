@@ -1,18 +1,11 @@
 var currDate = moment().format("dddd MMMM Do, YYYY");
 $("#currentDay").text(currDate);
-// console.log(currDate);
 
 var now = moment();
-// console.log(now);
 var thisHour = moment().hour();
 
-
 function textBlockClass(id){
-    // console.log(hour, " element hour");
-    // console.log(thisHour, "moment's hour");
   var hour = parseInt(id.replace("todo-", ""), 10);
-  console.log("textBlock");
-  console.log(hour);
   if (thisHour > hour) {
     $("#todo-" + hour).addClass("past");
     console.log(hour);
@@ -22,7 +15,7 @@ function textBlockClass(id){
   } else if (thisHour = hour) {
     $("#todo-" + hour).addClass("present");
   }
-} //end textBlockClass fct def
+} //end textBlockClass function
 
 function applyCurrentTime(){
     
@@ -31,29 +24,23 @@ function applyCurrentTime(){
         textBlockClass(this.id);
     });
 
-}//end applyCurrentTime 
+}//end applyCurrentTime function
 
 
 applyCurrentTime();
 
-// saveTimeblockEntry();
 
-// function saveTimeBlocks () {
 $(".saveBtn").click(function() {
 var id = $(this).attr("id").replace("save-", "");
-
 var toDo = $("#todo-" + id).val();
 localStorage.setItem(id, toDo);
 console.log("clicked");
 });
-// }
-
-//write a for loop that goes through every hour of the day.
-//for each hour. look inlocaal storage for that hour and put the value into the todo for that hour.
 
 
-$(".form-control").each(function(){
-  localStorage.getItem("todo-" + id).val();
-  console.log("todo-" + id);
-  
+$(".form-control").each(function(element){
+  localStorage.getItem(toDo);
+  console.log(toDo);
+  $("todo-" + id).text(toDo); 
 })
+
